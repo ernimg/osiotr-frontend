@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { refA, refB, refC } from '../Layout/MainNav';
+import { refA, refB, refC } from '../Layout/Nav/MainNav';
 class HomePage extends Component {
   constructor(props) {
     super(props);

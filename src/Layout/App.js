@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 /*Layout elements*/
-import Nav from './MainNav';
+import Nav from './Nav/MainNav';
 import Header from './HeaderContent';
 import SwitchPage from './Router';
 import Footer from './Footer';

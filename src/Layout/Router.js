@@ -1,11 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from '../Pages/HomePage';
+import Catalog from '../Pages/Catalog';
 
 const Router = props => {
   return (
     <BrowserRouter>
-      <Route exact path='/' component={HomePage} />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/catalog' component={Catalog} />
+      </Switch>
     </BrowserRouter>
   );
 };

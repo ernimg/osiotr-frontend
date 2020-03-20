@@ -1,0 +1,31 @@
+.main-nav {
+  height: 70px;
+  padding: 15px 50px 15px 80px;
+  background-color: black;
+  font-family: 'Roboto Condensed', sans-serif;
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    margin: 0 20px;
+    font-size: 2.2rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      border-bottom: 2px solid #fff;
+    }
+    &:nth-last-child(1) {
+      margin-left: auto;
+      margin-right: 70px;
+    }
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+  }
+}
