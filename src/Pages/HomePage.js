@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { refA, refB, refC } from '../Layout/MainNav';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +10,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <section ref={this.state.refList.refA}>
+        <section ref={refA}>
           <h2>O nas</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -25,7 +25,7 @@ class HomePage extends Component {
           </p>
         </section>
 
-        <section ref={this.state.refList.refB}>
+        <section ref={refB}>
           <h2>Galeria zdjęć</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -48,7 +48,7 @@ class HomePage extends Component {
             versions of Lorem Ipsum.
           </p>
         </section>
-        <section ref={this.state.refList.refC}>
+        <section ref={refC}>
           <h2>Kontakt</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting

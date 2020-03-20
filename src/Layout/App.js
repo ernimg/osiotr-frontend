@@ -2,19 +2,14 @@ import React, { Component } from 'react';
 /*Layout elements*/
 import Nav from './MainNav';
 import Header from './HeaderContent';
-import HomePage from './HomePage';
+import SwitchPage from './Router';
 import Footer from './Footer';
 /*Components elements*/
 
 /*Style*/
 class App extends Component {
   state = {
-    loaded: false,
-    refList: {
-      refA: React.createRef(),
-      refB: React.createRef(),
-      refC: React.createRef()
-    }
+    loaded: false
   };
 
   componentDidMount() {
@@ -33,9 +28,9 @@ class App extends Component {
         <header className='header'>
           <Header />
         </header>
-        <Nav refList={this.state.refList} click={this.handleScrollTo} />
+        <Nav click={this.handleScrollTo} />
         <main>
-          <HomePage refList={this.state.refList} />
+          <SwitchPage />
         </main>
         <footer>
           <Footer />
