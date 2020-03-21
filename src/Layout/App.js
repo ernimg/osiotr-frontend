@@ -15,9 +15,10 @@ class App extends Component {
   state = {};
 
   handleScrollTo = elRef => {
-    const el = elRef.current ? elRef.current : elRef;
-    console.log(el);
     setTimeout(() => {
+      const el = elRef.current ? elRef.current : elRef;
+      console.log(el);
+
       el.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
