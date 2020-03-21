@@ -26,3 +26,9 @@ html {
   background-image: url(../Assets/images/dock-1365387_1920.jpg);
   background-position: center center;
 }
+.contact,
+.about,
+.galery {
+  height: 100vh;
+  margin-top: 100px;
+}

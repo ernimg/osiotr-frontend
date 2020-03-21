@@ -1,4 +1,10 @@
 .main-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
   height: 70px;
   padding: 15px 50px 15px 80px;
   background-color: black;
@@ -35,6 +41,8 @@
   display: block;
   text-decoration: none;
   text-align: center;
+  letter-spacing: 1px;
   color: #fff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
 }
 /*# sourceMappingURL=mainNav.css.map */
