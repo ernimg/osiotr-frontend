@@ -1,32 +1,116 @@
+.burger,
+.main-nav {
+  z-index: 9999;
+}
+
 /*******************
 *****Burger Nav*****
 ********************/
-.burger-nav {
+.burger-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 15px 0 15px 15px;
   width: 100%;
   background-color: #fafafa;
 }
 
 @media (min-width: 1024px) {
-  .burger-nav {
+  .burger-bar {
     display: none;
   }
 }
 
-.burger-icon {
+.burger-bar__item {
+  text-decoration: none;
+  outline: none;
+}
+
+.burger-bar__ico {
+  color: #111026;
   font-size: 3rem;
 }
 
+.burger.burger--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.burger {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  width: 320px;
+  padding-top: 30px;
+  -webkit-transform: translateX(-100.5%);
+          transform: translateX(-100.5%);
+  background-color: #387362;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media (min-width: 1024px) {
+  .burger {
+    display: none;
+  }
+}
+
+.burger__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burger__item {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  font-size: 2.5rem;
+  line-height: 5rem;
+}
+
+.burger__link {
+  letter-spacing: 1px;
+  color: #fffbfb;
+  text-decoration: none;
+  outline: none;
+}
+
+.burger__link-icon {
+  margin-right: 7px;
+}
+
 /*******************
-*****Main Nav*******
+*****Main Nav*****
 ********************/
 .main-nav {
-  z-index: 9999;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 70px;
-  padding: 15px 50px 15px 80px;
-  background-color: black;
+  padding: 15px 5px 15px 10px;
+  background-color: #387362;
   font-family: 'Roboto Condensed', sans-serif;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .main-nav {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav {
+    padding: 15px 50px 15px 80px;
+  }
 }
 
 .main-nav__list {

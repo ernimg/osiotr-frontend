@@ -1,9 +1,9 @@
 import React from 'react';
-import { aboutRef } from '../Layout/App';
 const About = () => {
+  var ref1 = React.createRef();
   return (
     <>
-      <section className='about' ref={aboutRef}>
+      <section id='ref1' className='about' ref={ref1}>
         <h2>O nas</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting

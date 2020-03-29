@@ -1,9 +1,9 @@
 import React from 'react';
-import { galeryRef } from '../Layout/App';
 
 const Galery = () => {
+  var ref2 = React.createRef();
   return (
-    <section className='galery' ref={galeryRef}>
+    <section id='ref2' className='galery' ref={ref2}>
       <h2>Galeria</h2>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
