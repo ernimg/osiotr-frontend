@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import About from '../Components/About';
-import Galery from '../Components/Galery';
-import Contact from '../Components/Contact';
+import About from '../Layout/ContentMainSection/About';
+import Galery from '../Layout/ContentMainSection/Galery';
+import Contact from '../Layout/ContentMainSection/Contact';
 class HomePage extends Component {
   constructor(props) {
     super(props);

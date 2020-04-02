@@ -50,16 +50,17 @@ class Nav extends Component {
               this.handleScrollTo(bLink.ref);
             }}
           >
-            {this.state.burgerActive ? bLink.icon : false}
+            {bLink.icon}
             {bLink.name}
           </NavLink>
         ) : (
           <NavLink
+            onClick={this.closeMenu}
             className='burger__link'
             to={bLink.path}
             exact={bLink.exact ? true : false}
           >
-            {this.state.burgerActive ? bLink.icon : false}
+            {bLink.icon}
             {bLink.name}
           </NavLink>
         )}
@@ -76,7 +77,6 @@ class Nav extends Component {
             to={link.path}
             exact={link.exact ? link.exact : false}
           >
-            {this.state.burgerActive ? link.icon : false}
             {link.name}
           </NavLink>
         ) : (
@@ -85,7 +85,6 @@ class Nav extends Component {
             to={link.path}
             exact={link.exact ? true : false}
           >
-            {this.state.burgerActive ? link.icon : false}
             {link.name}
           </NavLink>
         )}

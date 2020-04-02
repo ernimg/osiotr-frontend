@@ -2,7 +2,7 @@ import React from 'react';
 export const listLinks = [
   {
     id: 1,
-    name: 'Osiotr.com',
+    name: 'Osiotr',
     path: '/',
     ref: '#ref0',
     exact: true,
