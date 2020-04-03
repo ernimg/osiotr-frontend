@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Input from '../../Components/FormInputs';
+import Input from '../../../Components/FormInput/FormInputs';
+import './Css/Constact.css';
 class Contact extends Component {
   state = {
     contactForm: {
@@ -48,7 +49,51 @@ class Contact extends Component {
         },
         value: ''
       }
-    }
+    },
+    contactIcon: [
+      {
+        id: 1,
+        icon: (
+          <i
+            className='contact-ico__img fa fa-map-marker'
+            aria-hidden='true'
+          ></i>
+        ),
+        value: `BOBROWIEC 22
+        BRANIEWO 14-500`
+      },
+      {
+        id: 2,
+        icon: (
+          <i className='contact-ico__img  fa fa-phone' aria-hidden='true'></i>
+        ),
+        value: `+48 602 77 62 75`
+      },
+      {
+        id: 3,
+        icon: (
+          <i className='contact-ico__img  fa fa-info' aria-hidden='true'></i>
+        ),
+        value: `NIP PL 5821543230 `
+      },
+      {
+        id: 4,
+        icon: (
+          <i className='contact-ico__img  fa fa-info' aria-hidden='true'></i>
+        ),
+        value: `Regon 170973890`
+      },
+      {
+        id: 5,
+        icon: (
+          <i
+            className='contact-ico__img  fa fa-envelope'
+            aria-hidden='true'
+          ></i>
+        ),
+        value: `aqua-osiotr@wp.pl`
+      }
+    ]
   };
 
   inputHandler = (event, idInput) => {
@@ -63,9 +108,18 @@ class Contact extends Component {
 
     this.setState({ contactForm });
   };
-
+  messagesDeliveryHandler = event => {
+    event.preventDefault();
+  };
   render() {
     const ref3 = React.createRef();
+    const contactIconData = this.state.contactIcon.map(contactItem => (
+      <p className='contact-ico' key={contactItem.id}>
+        {contactItem.icon}
+        <span className='contact-ico__decription'>{contactItem.value}</span>
+      </p>
+    ));
+
     const ElementsArr = [];
     for (const key in this.state.contactForm) {
       ElementsArr.push({
@@ -77,8 +131,9 @@ class Contact extends Component {
     return (
       <section id='ref3' className='contact' ref={ref3}>
         <div className='contact__wrapper'>
-          <div className='contact__child child1 '></div>
+          <div className='contact__child child1 '>{contactIconData}</div>
           <div className='contact__child child2 '>
+            <h2 className='contact__title'>Skontaktuj się z nami</h2>
             <form className='form' onSubmit={this.messagesDeliveryHandler}>
               {ElementsArr.map(formElement => (
                 <Input
@@ -91,6 +146,7 @@ class Contact extends Component {
                   }
                 />
               ))}
+              <button className='form__btn'>Wyślij</button>
             </form>
           </div>
         </div>
