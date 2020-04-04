@@ -13,10 +13,11 @@
   &__child {
     &.child1 {
       display: none;
-      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
         url(../../../../Assets/images/contact-bgc.jpg);
       background-size: cover;
       background-position: center center;
+
       @media (min-width: 800px) {
         flex-basis: 35%;
         display: block;

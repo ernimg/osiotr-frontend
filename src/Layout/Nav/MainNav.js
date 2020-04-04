@@ -9,21 +9,21 @@ class Nav extends Component {
     super(props);
     this.state = {
       listLinks: listLinks,
-      burgerActive: false
+      burgerActive: false,
     };
   }
-  handlerBurger = e => {
+  handlerBurger = (e) => {
     e.preventDefault();
     this.setState({
-      burgerActive: !this.state.burgerActive
+      burgerActive: !this.state.burgerActive,
     });
   };
   closeMenu = () => {
     this.setState({
-      burgerActive: false
+      burgerActive: false,
     });
   };
-  handleScrollTo = elRef => {
+  handleScrollTo = (elRef) => {
     setTimeout(() => {
       var url = elRef.replace('#', '');
       var el = document.getElementById(url);
@@ -33,13 +33,13 @@ class Nav extends Component {
       this.closeMenu();
       window.scroll({
         top: position,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }, 500);
   };
 
   render() {
-    const burgerNav = this.state.listLinks.map(bLink => (
+    const burgerNav = this.state.listLinks.map((bLink) => (
       <li key={bLink.id} className='burger__item'>
         {bLink.ref ? (
           <NavLink
