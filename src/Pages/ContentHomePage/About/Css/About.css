@@ -1,0 +1,91 @@
+.about {
+  background-color: #fafafa;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heading {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.heading__title {
+  font-size: 4.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.heading__item {
+  width: 300px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading__item::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: #387362;
+}
+
+.heading__item::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: '';
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: #387362;
+}
+
+.fa-star {
+  font-size: 2.5rem;
+  color: #387362;
+}
+
+.about__child1 {
+  padding: 20px 12px;
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+.about__introduction, .about__summary {
+  overflow-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-character;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  line-height: 1.75;
+  orphans: 3;
+}
+
+.about__list {
+  padding: 15px 0;
+}
+
+.about__item {
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.about__item-ico {
+  font-size: 2.2rem;
+  margin-right: 7px;
+  padding: 10px;
+  background-color: #387362;
+  color: #fff;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=About.css.map */
